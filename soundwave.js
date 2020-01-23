@@ -1,5 +1,5 @@
-function soundwave(soundwave, upperLimit, lowerLimit) {
+function bassfilter(soundwave, upperLimit, lowerLimit) {
   return soundwave;
 }
 
-module.exports = soundwave;
+module.exports = bassfilter;
