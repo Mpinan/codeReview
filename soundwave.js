@@ -1,12 +1,13 @@
 function bassfilter(soundwave, upperLimit, lowerLimit) {
-  let filterSoundwave;
-  soundwave.forEach(function(i) {
-    if (i > upperLimit) {
-      filterSoundwave = [...soundwave];
+  let filterSoundwave = [...soundwave];
 
-      i = upperLimit;
-      //   filterSoundwave.push(i);
-      console.log(filterSoundwave, "----");
+  filterSoundwave.map(function(i) {
+    let index = filterSoundwave.indexOf(i);
+    if (i > upperLimit) {
+      filterSoundwave[index] = upperLimit;
+    }
+    if (i < lowerLimit) {
+      filterSoundwave[index] = lowerLimit;
     }
   });
   return filterSoundwave;
