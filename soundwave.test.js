@@ -1,8 +1,11 @@
 const bassfilter = require("./soundwave");
 
-test("returns an array and upper and lower limit", () => {
-  expect(bassfilter([10, 5], 10, 5)).toEqual([10, 5]);
+test("returns an array and its upper limit", () => {
+  expect(bassfilter([10], 10, 5)).toEqual([10]);
 });
-xtest("returns an array with the upper limit set", () => {
-  expect(bassfilter([11, 5], 10, 5)).toEqual([10, 5]);
+test("returns an array and its lower limit", () => {
+  expect(bassfilter([5], 10, 5)).toEqual([5]);
+});
+test("returns an array with the upper limit set", () => {
+  expect(bassfilter([10, 5], 10, 5)).toEqual([10, 5]);
 });
